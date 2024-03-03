@@ -20,5 +20,5 @@ func main() {
 	taskController := controller.NewTaskController(taskUsecase)
 	ateendanceController := controller.NewAttendanceController(attendanceUsecase)
 	e := router.NewRouter(userController, taskController, ateendanceController)
-	e.Logger.Fatal(e.Start(":8083"))
+	e.Logger.Fatal(e.Start("0.0.0.0:8083"))
 }
